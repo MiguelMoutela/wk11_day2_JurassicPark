@@ -25,6 +25,6 @@ describe('Park', function(){
   })
   it('should get a count of all dinos with offspring number higher then 2', function(){
     park.addDino(dinosaur);
-    assert.strictEqual(park.getCountOfOffspringPropertyHigherThan2(),1);
+    assert.strictEqual(park.getCountOfOffspringPropertyHigherThanANumber(2),1);
   })
 })

@@ -16,10 +16,10 @@ Park.prototype.removeByType = function(type){
     }
   }
 }
-Park.prototype.getCountOfOffspringPropertyHigherThan2 = function(){
+Park.prototype.getCountOfOffspringPropertyHigherThanANumber = function(number){
   count = 0;
   for (var dinosaur of this.enclosure){
-    if (dinosaur.offspring > 2){
+    if (dinosaur.offspring > number){
       count++;
     }
   }

@@ -1,10 +1,10 @@
 const assert = require('assert');
-const dinossaur = require('../dinossaur.js');
+const Dinossaur = require('../dinosaur.js');
 
 describe('Dinosaur', function(){
-
+  let dinosaur;
   beforeEach(function(){
-    const Dinosaur = new Dinosaur;
+    dinosaur = new Dinosaur('Tyrannosaurus', 3);
   })
 
   it('should have a type', function(){

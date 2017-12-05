@@ -8,7 +8,7 @@ describe('Park', function(){
 
   beforeEach(function(){
     park = new Park();
-    dinosaur = new Dinosaur();
+    dinosaur = new Dinosaur('Tyrannosaurus');
   })
   it('should have an empty enclosure at start', function(){
     assert.strictEqual(park.getSize(), 0);
@@ -16,5 +16,11 @@ describe('Park', function(){
   it('should be able to add a dinosaur', function(){
     park.addDino(dinosaur);
     assert.strictEqual(park.getSize(),1)
+  })
+  it('should be able to remove dinos of a particular type', function(){
+    park.addDino(dinosaur);
+    assert.strictEqual(park.getSize(),1)
+    park.removeByType('Tyrannosaurus')
+    assert.strictEqual(park.getSize(),0)
   })
 })

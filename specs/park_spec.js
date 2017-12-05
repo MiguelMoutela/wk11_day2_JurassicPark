@@ -8,7 +8,7 @@ describe('Park', function(){
 
   beforeEach(function(){
     park = new Park();
-    dinosaur = new Dinosaur('Tyrannosaurus');
+    dinosaur = new Dinosaur('Tyrannosaurus', 3);
   })
   it('should have an empty enclosure at start', function(){
     assert.strictEqual(park.getSize(), 0);
@@ -22,5 +22,9 @@ describe('Park', function(){
     assert.strictEqual(park.getSize(),1)
     park.removeByType('Tyrannosaurus')
     assert.strictEqual(park.getSize(),0)
+  })
+  it('should get a count of all dinos with offspring number higher then 2', function(){
+    park.addDino(dinosaur);
+    assert.strictEqual(park.getCountOfOffspringPropertyHigherThan2(),1);
   })
 })
